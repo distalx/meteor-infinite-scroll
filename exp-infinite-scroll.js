@@ -108,65 +108,36 @@ if (Meteor.isClient) {
     }
   });
 
-}//server ends
-
-if (Meteor.isServer) {
-  Meteor.publish("notifications", function(limit){
-    return Notifications.find({},{limit});
-  });
-  Meteor.publish("posts", function(limit){
-    return Posts.find({},{limit});
-  });
-
-  Meteor.startup(function () {
-    if (Notifications.find().fetch().length === 0) {
-
-      for (var i = 0; i < 22; i++) {
-
-        Notifications.insert({title:Fake.word(),desc:Fake.sentence(1)});
-
-      }
-
-    }//if ends
-    if (Posts.find().fetch().length === 0) {
-
-      for (var i = 0; i < 22; i++) {
-
-        Posts.insert({title:Fake.word(5),desc:Fake.sentence(3)});
-
-      }
-
-    }//if ends
-  });
-
-
 }//client ends
 
 if (Meteor.isServer) {
-
-  Meteor.publish("posts", function(limit){
-    return Posts.find({},{limit});
-  });
-
   Meteor.publish("notifications", function(limit){
     return Notifications.find({},{limit});
+  });
+  Meteor.publish("posts", function(limit){
+    return Posts.find({},{limit});
   });
 
   Meteor.startup(function () {
     if (Notifications.find().fetch().length === 0) {
 
       for (var i = 0; i < 22; i++) {
+
         Notifications.insert({title:Fake.word(),desc:Fake.sentence(1)});
+
       }
 
     }//if ends
-
     if (Posts.find().fetch().length === 0) {
 
       for (var i = 0; i < 22; i++) {
+
         Posts.insert({title:Fake.word(5),desc:Fake.sentence(3)});
+
       }
 
     }//if ends
   });
-}
+
+
+}//server ends
