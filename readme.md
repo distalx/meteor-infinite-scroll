@@ -1,1 +1,1 @@
-#Meteor Infinite Scroll experiment
+#Meteor Infinite Scroll [experiment]

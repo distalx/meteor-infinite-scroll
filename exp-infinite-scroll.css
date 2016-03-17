@@ -1,1 +1,48 @@
 /* CSS declarations go here */
+.container{
+
+  display: block;
+  float: left;
+  margin-left: 50px;
+  margin-right: 50px;
+  border-style: ridge;
+  border-width: 3px;
+  border-color: #4489F7;
+  padding: 20px;
+
+}
+#flux{
+  height: 650px;
+  width: 600px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #eee;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+
+}
+
+#flux2{
+  height: 250px;
+  width: 300px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #eee;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+
+}
+.post{
+  margin: 10px;
+  padding: 2px;
+  border-style: ridge;
+  border-width: 2px;
+  border-color: #CC0000;
+}
+.notification{
+  margin: 10px;
+  padding: 2px;
+  border-style: ridge;
+  border-width: 2px;
+  border-color: #CC0000;
+}

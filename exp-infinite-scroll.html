@@ -2,8 +2,51 @@
   <title>exp-infinite-scroll</title>
 </head>
 
+
+
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-
+  <h4>Infinite scroll</h4>
+  <div class="container">
+      {{> postBox}}
+  </div>
+  <div class="container">
+      {{> notificationBox}}
+  </div>
 </body>
+
+
+<template name="postBox">
+  <div id="flux">
+    {{#each post}}
+      <div class="post">
+        <h4>{{title}}</h4>
+        <h6>{{desc}}</h6>
+      </div>
+    {{/each}}
+    <p>
+      {{#unless status}}
+      Loading...
+      {{else}}
+      No more Post <input type="button" value="Top" id="foo">
+      {{/unless}}
+    </p>
+  </div>
+</template>
+
+<template name="notificationBox">
+  <div id="flux2">
+    {{#each notification}}
+      <div class="notification">
+        <h4>{{title}}</h4>
+        <h6>{{desc}}</h6>
+      </div>
+    {{/each}}
+    <p>
+      {{#unless status}}
+      Loading...
+      {{else}}
+      No more Post <input type="button" value="Top" id="foo">
+      {{/unless}}
+    </p>
+  </div>
+</template>
