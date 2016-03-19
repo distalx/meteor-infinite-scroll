@@ -5,17 +5,27 @@
 
 
 <body>
-  <h4>Infinite scroll</h4>
   <div class="container">
-      {{> postBox}}
+    <div class="page-header">
+        <h4>Infinite scroll</h4>
+    </div>
+    <div class="row">
+      <div class="col-md-7">
+        {{> postBox}}
+      </div>
+      <div class="col-md-5">
+        {{> notificationBox}}
+      </div>
+    </div>
   </div>
-  <div class="container">
-      {{> notificationBox}}
-  </div>
+  <!--container-->
 </body>
 
 
 <template name="postBox">
+  <div class="page-header">
+    <h6>Posts</h6>
+  </div>
   <div id="flux">
     {{#each post}}
       <div class="post">
@@ -34,6 +44,9 @@
 </template>
 
 <template name="notificationBox">
+  <div class="page-header">
+    <h6>Notification</h6>
+  </div>
   <div id="flux2">
     {{#each notification}}
       <div class="notification">
